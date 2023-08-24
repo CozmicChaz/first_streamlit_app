@@ -19,8 +19,7 @@ streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
 fruits_selected=streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),default=['Avocado','Strawberries'])
 fruits_to_show = my_fruit_list.loc[fruits_selected]
 
-addFruit=streamlit.multiselect("Pick additional fruit:", list(my_fruit_list.index))
-streamlit.write('The user entered ', addFruit)
+
 
 # Display the table on the page.
 streamlit.dataframe(fruits_to_show)
@@ -43,3 +42,8 @@ my_data_rows = my_cur.fetchall()
 #streamlit.text("Hello from Snowflake:")
 streamlit.header("The fruit load list contains:")
 streamlit.dataframe(my_data_rows)
+
+#addFruit=streamlit.multiselect("Pick additional fruit:", list(my_fruit_list.index))
+#addFruit=stramlit.text_input("Please pick fruit to add")
+streamlit.write('The user entered ', addFruit)
+#my_cur.execute("insert into fruit_load_list values ('from streamlit')")
