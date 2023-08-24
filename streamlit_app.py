@@ -44,6 +44,6 @@ streamlit.header("The fruit load list contains:")
 streamlit.dataframe(my_data_rows)
 
 #addFruit=streamlit.multiselect("Pick additional fruit:", list(my_fruit_list.index))
-#addFruit=stramlit.text_input("Please pick fruit to add","thing")
+addFruit=stramlit.text_input("Please pick fruit to add")
 streamlit.write('The user entered ', addFruit)
 #my_cur.execute("insert into fruit_load_list values ('from streamlit')")
